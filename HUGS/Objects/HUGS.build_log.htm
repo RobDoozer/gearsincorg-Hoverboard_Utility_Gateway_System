@@ -3,139 +3,403 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.34.0.0
-Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Philip Malone, GEARS, LIC=----
+IDE-Version: ÂµVision V5.42.0.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Jörn Schlingensiepen, TH Ingolstadt, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-Lite  Version: 5.34.0.0
-Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 7 (build 960)
-Assembler:       Armasm.exe V5.06 update 7 (build 960)
-Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
-Library Manager: ArmAr.exe V5.06 update 7 (build 960)
-Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.34.0.0
-Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
-Dialog DLL:      TCM.DLL V1.48.0.0
+Toolchain:       MDK-Lite  Version: 5.42.0.0
+Toolchain Path:  c:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.23
+Assembler:       Armasm.exe V6.23
+Linker/Locator:  ArmLink.exe V6.23
+Library Manager: ArmAr.exe V6.23
+Hex Converter:   FromElf.exe V6.23
+CPU DLL:         
+Dialog DLL:      
+Target DLL:      UL2V8M.DLL V1.7.15.0
+Dialog DLL:      TCM.DLL V1.56.6.0
  
 <h2>Project:</h2>
-D:\Users\Phil\GitHub\Hoverboard_Utility_Gateway_System\HUGS\HUGS.uvprojx
-Project File Date:  06/15/2021
+C:\work\HoverBoard\Hoverboard_Utility_Gateway_System\HUGS\HUGS.uvprojx
+Project File Date:  05/04/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Target 1'
+*** Using Compiler 'V6.23', folder: 'c:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'GD32E230C8T6'
+Src/setup.c(58): error: call to undeclared function 'nvic_priority_group_set'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   58 |         nvic_priority_group_set(NVIC_PRIGROUP_PRE4_SUB0);
+      |         ^
+Src/setup.c(58): error: use of undeclared identifier 'NVIC_PRIGROUP_PRE4_SUB0'
+   58 |         nvic_priority_group_set(NVIC_PRIGROUP_PRE4_SUB0);
+      |                                 ^
+Src/setup.c(112): error: too many arguments to function call, expected 2, have 3
+  112 |         nvic_irq_enable(TIMER13_IRQn, 0, 0);
+      |         ~~~~~~~~~~~~~~~                  ^
+C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc\gd32e23x_misc.h(69): note: 'nvic_irq_enable' declared here
+   69 | void nvic_irq_enable(uint8_t nvic_irq, uint8_t nvic_irq_priority);
+      |      ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Src/setup.c(304): error: too many arguments to function call, expected 2, have 3
+  304 |         nvic_irq_enable(TIMER0_BRK_UP_TRG_COM_IRQn, 0, 0);
+      |         ~~~~~~~~~~~~~~~                                ^
+C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc\gd32e23x_misc.h(69): note: 'nvic_irq_enable' declared here
+   69 | void nvic_irq_enable(uint8_t nvic_irq, uint8_t nvic_irq_priority);
+      |      ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Src/setup.c(324): error: too many arguments to function call, expected 2, have 3
+  324 |         nvic_irq_enable(DMA_Channel0_IRQn, 1, 0);
+      |         ~~~~~~~~~~~~~~~                       ^
+C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc\gd32e23x_misc.h(69): note: 'nvic_irq_enable' declared here
+   69 | void nvic_irq_enable(uint8_t nvic_irq, uint8_t nvic_irq_priority);
+      |      ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Src/setup.c(337): error: passing 'dma_parameter_struct' to parameter of incompatible type 'dma_parameter_struct *'; take the address with &
+  337 |         dma_init(DMA_CH0, dma_init_struct_adc);
+      |                           ^~~~~~~~~~~~~~~~~~~
+      |                           &
+C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc\gd32e23x_dma.h(212): note: passing argument to parameter 'init_struct' here
+  212 | void dma_init(dma_channel_enum channelx, dma_parameter_struct* init_struct);
+      |                                                                ^
+Src/setup.c(359): error: use of undeclared identifier 'ADC_EXTTRIG_REGULAR_SWRCST'
+  359 |         adc_external_trigger_source_config(ADC_REGULAR_CHANNEL, ADC_EXTTRIG_REGULAR_SWRCST);
+      |                                                                 ^
+Src/setup.c(363): error: call to undeclared function 'adc_vbat_disable'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  363 |         adc_vbat_disable();
+      |         ^
+Src/setup.c(405): error: too many arguments to function call, expected 2, have 3
+  405 |         nvic_irq_enable(DMA_Channel3_4_IRQn, 2, 0);
+      |         ~~~~~~~~~~~~~~~                         ^
+C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc\gd32e23x_misc.h(69): note: 'nvic_irq_enable' declared here
+   69 | void nvic_irq_enable(uint8_t nvic_irq, uint8_t nvic_irq_priority);
+      |      ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Src/setup.c(418): error: passing 'dma_parameter_struct' to parameter of incompatible type 'dma_parameter_struct *'; take the address with &
+  418 |         dma_init(DMA_CH4, dma_init_struct_usart);
+      |                           ^~~~~~~~~~~~~~~~~~~~~
+      |                           &
+C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc\gd32e23x_dma.h(212): note: passing argument to parameter 'init_struct' here
+  212 | void dma_init(dma_channel_enum channelx, dma_parameter_struct* init_struct);
+      |                                                                ^
+Src/setup.c(461): error: too many arguments to function call, expected 2, have 3
+  461 |         nvic_irq_enable(DMA_Channel1_2_IRQn, 2, 0);
+      |         ~~~~~~~~~~~~~~~                         ^
+C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc\gd32e23x_misc.h(69): note: 'nvic_irq_enable' declared here
+   69 | void nvic_irq_enable(uint8_t nvic_irq, uint8_t nvic_irq_priority);
+      |      ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Src/setup.c(474): error: passing 'dma_parameter_struct' to parameter of incompatible type 'dma_parameter_struct *'; take the address with &
+  474 |         dma_init(DMA_CH2, dma_init_struct_usart);
+      |                           ^~~~~~~~~~~~~~~~~~~~~
+      |                           &
+C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc\gd32e23x_dma.h(212): note: passing argument to parameter 'init_struct' here
+  212 | void dma_init(dma_channel_enum channelx, dma_parameter_struct* init_struct);
+      |                                                                ^
+12 errors generated.
 compiling setup.c...
-linking...
-Program Size: Code=20516 RO-data=1168 RW-data=160 ZI-data=2312  
-FromELF: creating hex file...
-".\Objects\HUGS.axf" - 0 Error(s), 0 Warning(s).
+compiling gd32e23x_cmp.c...
+Src/commsHUGS.c(43): error: unknown type name 'bool'
+   43 | static bool       sHUGSRecord = FALSE;
+      |        ^
+Src/commsHUGS.c(43): error: use of undeclared identifier 'FALSE'
+   43 | static bool       sHUGSRecord = FALSE;
+      |                                 ^
+Src/commsHUGS.c(63): error: unknown type name 'bool'
+   63 | bool CheckUSARTHUGSInput(uint8_t USARTBuffer[]);
+      | ^
+Src/commsHUGS.c(69): error: unknown type name 'bool'
+   69 | bool                    HUGS_ESTOP = FALSE;
+      | ^
+Src/commsHUGS.c(69): error: use of undeclared identifier 'FALSE'
+   69 | bool                    HUGS_ESTOP = FALSE;
+      |                                      ^
+Src/commsHUGS.c(78): error: use of undeclared identifier 'TRUE'
+   78 |         HUGS_ESTOP = TRUE;
+      |                      ^
+Src/commsHUGS.c(93): error: use of undeclared identifier 'TRUE'
+   93 |                 sHUGSRecord = TRUE;
+      |                               ^
+Src/commsHUGS.c(109): error: use of undeclared identifier 'FALSE'
+  109 |                                 sHUGSRecord = FALSE;
+      |                                               ^
+Src/commsHUGS.c(117): error: use of undeclared identifier 'FALSE'
+  117 |                                         sHUGSRecord = FALSE;
+      |                                                       ^
+Src/commsHUGS.c(137): error: use of undeclared identifier 'FALSE'
+  137 |                                                 sHUGSRecord = FALSE;
+      |                                                               ^
+Src/commsHUGS.c(148): error: unknown type name 'bool'
+  148 | bool CheckUSARTHUGSInput(uint8_t USARTBuffer[])
+      | ^
+Src/commsHUGS.c(158): error: use of undeclared identifier 'FALSE'
+  158 |                 return FALSE;
+      |                        ^
+Src/commsHUGS.c(168): error: use of undeclared identifier 'FALSE'
+  168 |                 return FALSE;
+      |                        ^
+Src/commsHUGS.c(232): error: use of undeclared identifier 'TRUE'
+  232 |         return TRUE;
+      |                ^
+14 errors generated.
+compiling commsHUGS.c...
+compiling comms.c...
+compiling gd32e23x_crc.c...
+Src/main.c(55): error: unknown type name 'bool'
+   55 | extern bool                     HUGS_ESTOP;
+      |        ^
+Src/main.c(189): error: use of undeclared identifier 'TRUE'
+  189 |         HUGS_ESTOP   = TRUE;    
+      |                        ^
+2 errors generated.
+compiling main.c...
+Src/it.c(39): error: unknown type name 'bool'
+   39 | bool         msToggle    = FALSE;
+      | ^
+Src/it.c(39): error: use of undeclared identifier 'FALSE'
+   39 | bool         msToggle    = FALSE;
+      |                            ^
+Src/it.c(67): error: use of undeclared identifier 'FALSE'
+   67 |         msToggle = msToggle ? FALSE : TRUE;
+      |                               ^
+Src/it.c(67): error: use of undeclared identifier 'TRUE'
+   67 |         msToggle = msToggle ? FALSE : TRUE;
+      |                                       ^
+Src/it.c(75): warning: comparison of integers of different signs: 'uint32_t' (aka 'unsigned int') and 'int16_t' (aka 'short') [-Wsign-compare]
+   75 |                 if (driveSafeMs > HUGS_WatchDog)
+      |                     ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~
+1 warning and 4 errors generated.
+compiling it.c...
+compiling gd32e23x_dbg.c...
+compiling gd32e23x_dma.c...
+compiling led.c...
+Src/commsSteering.c(46): error: unknown type name 'bool'
+   46 | static bool      sSteerRecord = FALSE;
+      |        ^
+Src/commsSteering.c(46): error: use of undeclared identifier 'FALSE'
+   46 | static bool      sSteerRecord = FALSE;
+      |                                 ^
+Src/commsSteering.c(54): error: unknown type name 'bool'
+   54 | bool CheckUSARTSteerInput(uint8_t u8USARTBuffer[]);
+      | ^
+Src/commsSteering.c(70): error: use of undeclared identifier 'TRUE'
+   70 |                 sSteerRecord = TRUE;
+      |                                ^
+Src/commsSteering.c(86): error: use of undeclared identifier 'FALSE'
+   86 |                                 sSteerRecord = FALSE;
+      |                                                ^
+Src/commsSteering.c(99): error: use of undeclared identifier 'FALSE'
+   99 |                                         sSteerRecord = FALSE;
+      |                                                        ^
+Src/commsSteering.c(119): error: use of undeclared identifier 'FALSE'
+  119 |                                                 sSteerRecord = FALSE;
+      |                                                                ^
+Src/commsSteering.c(131): error: unknown type name 'bool'
+  131 | bool CheckUSARTSteerInput(uint8_t USARTBuffer[])
+      | ^
+Src/commsSteering.c(146): error: use of undeclared identifier 'FALSE'
+  146 |                 return FALSE;
+      |                        ^
+Src/commsSteering.c(156): error: use of undeclared identifier 'FALSE'
+  156 |                 return FALSE;
+      |                        ^
+Src/commsSteering.c(207): error: use of undeclared identifier 'TRUE'
+  207 |         return TRUE;
+      |                ^
+11 errors generated.
+compiling commsSteering.c...
+Src/bldc.c(89): error: unknown type name 'bool'
+   89 | bool            stepperMode                             = FALSE;
+      | ^
+Src/bldc.c(89): error: use of undeclared identifier 'FALSE'
+   89 | bool            stepperMode                             = FALSE;
+      |                                                           ^
+Src/bldc.c(90): error: unknown type name 'bool'
+   90 | bool            phaseRestart                    = FALSE;
+      | ^
+Src/bldc.c(90): error: use of undeclared identifier 'FALSE'
+   90 | bool            phaseRestart                    = FALSE;
+      |                                                   ^
+Src/bldc.c(110): error: unknown type name 'bool'
+  110 | bool                            closedLoopSpeed = FALSE;
+      | ^
+Src/bldc.c(110): error: use of undeclared identifier 'FALSE'
+  110 | bool                            closedLoopSpeed = FALSE;
+      |                                                   ^
+Src/bldc.c(185): error: use of undeclared identifier 'FALSE'
+  185 |                 closedLoopSpeed   = FALSE;
+      |                                     ^
+Src/bldc.c(200): error: use of undeclared identifier 'TRUE'
+  200 |         closedLoopSpeed = TRUE;
+      |                           ^
+Src/bldc.c(216): error: use of undeclared identifier 'FALSE'
+  216 |                 stepperMode = FALSE;
+      |                               ^
+Src/bldc.c(217): error: use of undeclared identifier 'FALSE'
+  217 |                 phaseRestart = FALSE;
+      |                                ^
+Src/bldc.c(224): error: use of undeclared identifier 'TRUE'
+  224 |                         phaseRestart = TRUE;
+      |                                        ^
+Src/bldc.c(226): error: use of undeclared identifier 'TRUE'
+  226 |                         stepperMode = TRUE;                                                      // Turn on stepper now
+      |                                       ^
+Src/bldc.c(242): error: use of undeclared identifier 'FALSE'
+  242 |         closedLoopSpeed = FALSE;
+      |                           ^
+Src/bldc.c(243): error: use of undeclared identifier 'FALSE'
+  243 |         stepperMode   = FALSE;
+      |                         ^
+Src/bldc.c(365): error: use of undeclared identifier 'FALSE'
+  365 |                         phaseRestart = FALSE;
+      |                                        ^
+Src/bldc.c(366): error: use of undeclared identifier 'TRUE'
+  366 |                         stepperMode = TRUE;
+      |                                       ^
+16 errors generated.
+compiling bldc.c...
+compiling gd32e23x_adc.c...
+compiling gd32e23x_exti.c...
+compiling gd32e23x_fmc.c...
+compiling gd32e23x_fwdgt.c...
+compiling gd32e23x_gpio.c...
+compiling gd32e23x_i2c.c...
+compiling gd32e23x_misc.c...
+compiling gd32e23x_pmu.c...
+compiling gd32e23x_rcu.c...
+compiling gd32e23x_spi.c...
+compiling gd32e23x_rtc.c...
+compiling gd32e23x_syscfg.c...
+assembling startup_gd32e23x.s...
+compiling gd32e23x_wwdgt.c...
+compiling system_gd32e23x.c...
+compiling gd32e23x_usart.c...
+compiling gd32e23x_timer.c...
+".\Objects\HUGS.axf" - 59 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
                 http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
-                ARM.CMSIS.5.7.0
+                ARM::CMSIS@5.7.0
                 CMSIS (Cortex Microcontroller Software Interface Standard)
    * Component: CORE Version: 5.4.0
 
 Package Vendor: GigaDevice
-                http://gd32mcu.21ic.com/data/documents/yingyongruanjian/GigaDevice.GD32F1x0_DFP.3.1.0.pack
-                GigaDevice.GD32F1x0_DFP.3.1.0
-                GigaDevice GD32F1x0 Series Device Support and Examples
-   * Component: ADC Version: 3.1.0
-   * Component: DMA Version: 3.1.0
-   * Component: FWDGT Version: 3.1.0
-   * Component: GPIO Version: 3.1.0
-   * Component: I2C Version: 3.1.0
-   * Component: MCUDBG Version: 3.1.0
-   * Component: MISC Version: 3.1.0
-   * Component: OPA Version: 3.1.0
-   * Component: PMU Version: 3.1.0
-   * Component: RCU Version: 3.1.0
-   * Component: SYSCFG Version: 3.1.0
-   * Component: TIMER Version: 3.1.0
-   * Component: USART Version: 3.1.0
-   * Component: WWDGT Version: 3.1.0
-   * Component: GD32F1x0_libopt Version: 3.1.0
-   * Component: Startup Version: 3.1.0
+                https://gd32mcu.com/data/documents/pack/GigaDevice.GD32E23x_DFP.1.0.2.pack
+                GigaDevice::GD32E23x_DFP@1.0.2
+                GigaDevice GD32E23x Series Device Support and Examples
+   * Component: ADC Version: 1.0.0
+   * Component: CMP Version: 1.0.0
+   * Component: CRC Version: 1.0.0
+   * Component: DBG Version: 1.0.0
+   * Component: DMA Version: 1.0.0
+   * Component: EXTI Version: 1.0.0
+   * Component: FMC Version: 1.0.0
+   * Component: FWDGT Version: 1.0.0
+   * Component: GPIO Version: 1.0.0
+   * Component: I2C Version: 1.0.0
+   * Component: MISC Version: 1.0.0
+   * Component: PMU Version: 1.0.0
+   * Component: RCU Version: 1.0.0
+   * Component: RTC Version: 1.0.0
+   * Component: SPI_I2S Version: 1.0.0
+   * Component: SYSCFG Version: 1.0.0
+   * Component: TIMER Version: 1.0.0
+   * Component: USART Version: 1.0.0
+   * Component: WWDGT Version: 1.0.0
+   * Component: GD32E23x_libopt Version: 1.0.0
+   * Component: Startup Version: 1.0.0
 
 <h2>Collection of Component include folders:</h2>
-  .\RTE\_Target_1
-  C:\Users\13015\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
-  C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc
-  C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Include
+  ./RTE/_GD32E230C8T6
+  C:/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include
+  C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Firmware/Peripherals/inc
+  C:/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.4.0
+   * Component: ARM::CMSIS:CORE@5.4.0
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:ADC:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_adc.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_adc.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:ADC@1.0.0
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_adc.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_adc.h
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:DMA:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_dma.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_dma.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:CMP@1.0.0
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_cmp.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_cmp.h
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:FWDGT:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_fwdgt.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_fwdgt.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:CRC@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_crc.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_crc.c
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:GPIO:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_gpio.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_gpio.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:DBG@1.0.0
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_dbg.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_dbg.h
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:I2C:3.1.0
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_i2c.c
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_i2c.h
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:DMA@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_dma.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_dma.c
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:MCUDBG:3.1.0
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_dbg.c
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_dbg.h
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:EXTI@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_exti.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_exti.c
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:MISC:3.1.0
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_misc.c
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_misc.h
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:FMC@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_fmc.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_fmc.c
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:OPA:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_opa.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_opa.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:FWDGT@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_fwdgt.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_fwdgt.c
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:PMU:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_pmu.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_pmu.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:GPIO@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_gpio.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_gpio.c
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:RCU:3.1.0
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_rcu.c
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_rcu.h
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:I2C@1.0.0
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_i2c.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_i2c.h
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:SYSCFG:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_syscfg.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_syscfg.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:MISC@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_misc.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_misc.c
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:TIMER:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_timer.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_timer.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:PMU@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_pmu.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_pmu.c
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:USART:3.1.0
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_usart.c
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_usart.h
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:RCU@1.0.0
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_rcu.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_rcu.h
 
-   * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:WWDGT:3.1.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_wwdgt.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_wwdgt.c
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:RTC@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_rtc.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_rtc.c
 
-   * Component: GigaDevice::Device:GD32F1x0_libopt:3.1.0
-      Include file:  Device\Include\gd32f1x0_libopt.h
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:SPI_I2S@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_spi.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_spi.c
 
-   * Component: GigaDevice::Device:Startup:3.1.0
-      Include file:  Device\Include\gd32f1x0.h
-      Source file:   Device\Source\system_gd32f1x0.c
-      Source file:   Device\Source\startup_gd32f1x0.s
-Build Time Elapsed:  00:00:00
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:SYSCFG@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_syscfg.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_syscfg.c
+
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:TIMER@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_timer.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_timer.c
+
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:USART@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_usart.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_usart.c
+
+   * Component: GigaDevice::Device:GD32E23x_StdPeripherals:WWDGT@1.0.0
+      Include file:  Device/Firmware/Peripherals/inc/gd32e23x_wwdgt.h
+      Source file:   Device/Firmware/Peripherals/src/gd32e23x_wwdgt.c
+
+   * Component: GigaDevice::Device:GD32E23x_libopt@1.0.0
+      Include file:  Device/Include/gd32e23x_libopt.h
+
+   * Component: GigaDevice::Device:Startup@1.0.0
+      Source file:   Device/Source/ARM/startup_gd32e23x.s
+      Source file:   Device/Source/system_gd32e23x.c
+      Include file:  Device/Include/gd32e23x.h
+Target not created.
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

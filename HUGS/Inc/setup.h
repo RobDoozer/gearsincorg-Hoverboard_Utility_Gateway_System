@@ -26,7 +26,8 @@
 #ifndef SETUP_H
 #define SETUP_H
 
-#include "gd32f1x0.h"
+
+#include "gd32e23x.h"
 #include "../Inc/config.h"
 
 

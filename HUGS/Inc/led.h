@@ -26,7 +26,8 @@
 #ifndef LED_H
 #define LED_H
 
-#include "gd32f1x0.h"
+
+#include "gd32e23x.h"
 #include "../Inc/config.h"
 
 // Only slave has LED mechanism

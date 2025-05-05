@@ -23,7 +23,8 @@
 * GNU General Public License for more details.
 */
 
-#include "gd32f1x0.h"
+
+#include "gd32e23x.h"
 #include "../Inc/setup.h"
 #include "../Inc/defines.h"
 #include "../Inc/config.h"

@@ -27,7 +27,8 @@
 #ifndef DEFINES_H
 #define DEFINES_H
 
-#include "gd32f1x0.h"
+#include "gd32e23x.h"
+
 #include "../Inc/config.h"
 
 // LED defines

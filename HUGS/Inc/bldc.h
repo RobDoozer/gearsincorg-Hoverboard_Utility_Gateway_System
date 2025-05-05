@@ -26,7 +26,9 @@
 #ifndef BLDC_H
 #define BLDC_H
 
-#include "gd32f1x0.h"
+
+#include "gd32e23x.h"
+
 #include "../Inc/config.h"
 
 #define SPEED_MODE_PF				0

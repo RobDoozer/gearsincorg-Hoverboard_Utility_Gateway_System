@@ -26,7 +26,9 @@
 #ifndef COMMSHUGS_H
 #define COMMSHUGS_H
 
-#include "gd32f1x0.h"
+
+#include "gd32e23x.h"
+
 #include "../Inc/config.h"
 
 #define	 MAX_SPEED	5000

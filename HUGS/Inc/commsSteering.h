@@ -26,7 +26,7 @@
 #ifndef COMMSSTEERING_H
 #define COMMSSTEERING_H
 
-#include "gd32f1x0.h"
+#include "gd32e23x.h"
 #include "../Inc/config.h"
 
 #define MM_PER_DEGREE 		 3.508

@@ -1,29 +1,26 @@
-.\objects\led.o: Src\led.c
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Include\gd32f1x0.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h
-.\objects\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Include\system_gd32f1x0.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Include\gd32f1x0_libopt.h
-.\objects\led.o: .\RTE\_Target_1\RTE_Components.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_adc.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Include\gd32f1x0.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_dbg.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_dma.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_gpio.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_syscfg.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_i2c.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_fwdgt.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_pmu.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_rcu.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_timer.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_usart.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_wwdgt.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h
-.\objects\led.o: C:\Users\13015\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.1.0\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h
-.\objects\led.o: Src\../Inc/led.h
-.\objects\led.o: Src\../Inc/../Inc/config.h
-.\objects\led.o: Src\../Inc/defines.h
+./objects/led.o: Src\led.c \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Include\gd32e23x.h \
+  C:\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Include\system_gd32e23x.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Include\gd32e23x_libopt.h \
+  RTE\_GD32E230C8T6\RTE_Components.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_adc.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_cmp.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_crc.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_dbg.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_dma.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_exti.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_fmc.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_fwdgt.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_gpio.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_i2c.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_misc.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_pmu.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_rcu.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_rtc.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_spi.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_syscfg.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_timer.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_usart.h \
+  C:\Arm\Packs\GigaDevice\GD32E23x_DFP\1.0.2\Device\Firmware\Peripherals\inc\gd32e23x_wwdgt.h \
+  Src\..\Inc\led.h Src\..\Inc\..\Inc\config.h Src\..\Inc\defines.h
